@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <!-- Project from https://start.vaadin.com/project/c47b07c1-5e04-4331-8442-3439224516bc -->
+    <!-- Project from https://start.vaadin.com/project/50825fbe-a7fd-482b-a0cd-feec8e303b58 -->
     <groupId>com.example.application</groupId>
     <artifactId>myapp</artifactId>
     <name>myapp</name>
@@ -125,6 +125,12 @@
             <version>5.1.1</version>
             <scope>test</scope>
         </dependency>
+          <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+        <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        <version>42.5.1</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -136,7 +142,7 @@
                 <!-- Clean build and startup time for Vaadin apps sometimes may exceed
                      the default Spring Boot's 30sec timeout.  -->
                 <configuration>
-                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5193</jvmArguments>
+                    <jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=5636</jvmArguments>
                     <wait>500</wait>
                     <maxAttempts>240</maxAttempts>
                 </configuration>

@@ -15,12 +15,12 @@ public class AboutView extends VerticalLayout {
     public AboutView() {
         setSpacing(false);
 
-        Image img = new Image("images/empty-plant.png", "placeholder plant");
+        Image img = new Image("images/Logo.png", "placeholder Logo");
         img.setWidth("200px");
         add(img);
 
-        add(new H2("This place intentionally left empty"));
-        add(new Paragraph("It’s a place where you can grow your own UI 🤗"));
+        add(new H2("Sobre a Freitulitos"));
+        add(new Paragraph("Trata-se de uma empresa do ramo dos doces que aborda como produto principal os cookies"));
 
         setSizeFull();
         setJustifyContentMode(JustifyContentMode.CENTER);
