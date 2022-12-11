@@ -5,6 +5,7 @@ import com.example.application.components.appnav.AppNavItem;
 import com.example.application.views.about.AboutView;
 import com.example.application.views.cliente.ClienteView;
 import com.example.application.views.disciplina.DisciplinaView;
+import com.example.application.views.fornecedor.FornecedorView;
 import com.example.application.views.funcionario.FuncionarioView;
 import com.example.application.views.helloworld.HelloWorldView;
 import com.example.application.views.produto.ProdutoView;
@@ -60,7 +61,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(new AppNavItem("Venda", HelloWorldView.class, "la la-money"));
         nav.addItem(new AppNavItem("Funcionario", FuncionarioView.class, "la la-briefcase"));
         nav.addItem(new AppNavItem("Produto", ProdutoView.class, "la la-cookie"));
-        nav.addItem(new AppNavItem("Fornecedor", HelloWorldView.class, "la la-car"));
+        nav.addItem(new AppNavItem("Fornecedor", FornecedorView.class, "la la-car"));
         nav.addItem(new AppNavItem("Cliente", ClienteView.class, "la la-user"));
         nav.addItem(new AppNavItem("About", AboutView.class, "la la-home"));
 

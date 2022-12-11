@@ -1,25 +1,19 @@
 package com.example.application.entidades;
 
+import java.time.LocalDate;
+
 public class Fornecedor {
 
     private int id_fornecedor;
-    private int quantidade;
-    private String forma_de_pagamento;
+    private String pedido;
+    private LocalDate data;
 
-    public int getQuantidade() {
-        return quantidade;
+    public String getPedido() {
+        return pedido;
     }
 
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-
-    public String getForma_de_pagamento() {
-        return forma_de_pagamento;
-    }
-
-    public void setForma_de_pagamento(String forma_de_pagamento) {
-        this.forma_de_pagamento = forma_de_pagamento;
+    public void setPedido(String pedido) {
+        this.pedido = pedido;
     }
 
     public int getId_fornecedor() {
@@ -28,6 +22,14 @@ public class Fornecedor {
 
     public void setId_fornecedor(int id_fornecedor) {
         this.id_fornecedor = id_fornecedor;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
     }
 
 }

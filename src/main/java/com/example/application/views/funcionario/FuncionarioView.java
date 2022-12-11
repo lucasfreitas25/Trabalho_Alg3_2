@@ -8,6 +8,8 @@ import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Paragraph;
+import com.vaadin.flow.component.icon.Icon;
+import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -124,7 +126,8 @@ public class FuncionarioView extends VerticalLayout {
         });
 
         grid.addComponentColumn(c -> {
-            Button del = new Button("Del");
+            Button del = new Button();
+            del.setIcon(new Icon(VaadinIcon.TRASH));
             del.addClickListener(ev -> {
                 repository.remover(c.getId_funcionario());
                 grid.setItems(repository.listar());

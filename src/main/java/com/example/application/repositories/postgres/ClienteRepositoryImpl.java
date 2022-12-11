@@ -87,4 +87,24 @@ public class ClienteRepositoryImpl implements ClienteRepository {
         }
     }
 
+    public List<Cliente> contadorClientes() {
+        List<Cliente> lista = new ArrayList<>();
+        Connection con;
+        try {
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cliente", "postgres", "2515");
+            String sql = "SELECT COUNT(nome) FROM produto;";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                Cliente d = new Cliente();
+                d.setNome(rs.getString("nome"));
+                lista.add(d);
+            }
+            con.close();
+        } catch (Exception erro) {
+            throw new RuntimeException(erro);
+        }
+        return lista;
+    }
+
 }
