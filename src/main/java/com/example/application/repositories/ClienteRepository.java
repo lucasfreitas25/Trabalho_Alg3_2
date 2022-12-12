@@ -14,4 +14,5 @@ public interface ClienteRepository {
     public List<Cliente> listar();
 
     public List<Cliente> contadorClientes();
+
 }

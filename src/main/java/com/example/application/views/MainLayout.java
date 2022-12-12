@@ -4,11 +4,10 @@ import com.example.application.components.appnav.AppNav;
 import com.example.application.components.appnav.AppNavItem;
 import com.example.application.views.about.AboutView;
 import com.example.application.views.cliente.ClienteView;
-import com.example.application.views.disciplina.DisciplinaView;
 import com.example.application.views.fornecedor.FornecedorView;
 import com.example.application.views.funcionario.FuncionarioView;
-import com.example.application.views.helloworld.HelloWorldView;
 import com.example.application.views.produto.ProdutoView;
+import com.example.application.views.venda.VendaView;
 import com.vaadin.flow.component.applayout.AppLayout;
 import com.vaadin.flow.component.applayout.DrawerToggle;
 import com.vaadin.flow.component.html.Footer;
@@ -57,8 +56,7 @@ public class MainLayout extends AppLayout {
         // For documentation, visit https://github.com/vaadin/vcf-nav#readme
         AppNav nav = new AppNav();
 
-        nav.addItem(new AppNavItem("Disciplina", DisciplinaView.class, "la la-cookie"));
-        nav.addItem(new AppNavItem("Venda", HelloWorldView.class, "la la-money"));
+        nav.addItem(new AppNavItem("Venda", VendaView.class, "la la-money"));
         nav.addItem(new AppNavItem("Funcionario", FuncionarioView.class, "la la-briefcase"));
         nav.addItem(new AppNavItem("Produto", ProdutoView.class, "la la-cookie"));
         nav.addItem(new AppNavItem("Fornecedor", FornecedorView.class, "la la-car"));

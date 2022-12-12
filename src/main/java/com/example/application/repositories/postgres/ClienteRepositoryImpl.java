@@ -107,4 +107,25 @@ public class ClienteRepositoryImpl implements ClienteRepository {
         return lista;
     }
 
+    public List<Cliente> buscacliente(String c) {
+        List<Cliente> lista = new ArrayList<>();
+        Connection con;
+        try {
+            con = DriverManager.getConnection("jdbc:postgresql://localhost:5432/cliente", "postgres", "2515");
+            String sql = "SELECT cpf FROM cliente;";
+            Statement st = con.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                Cliente d = new Cliente();
+                d.setNome(rs.getString("nome"));
+                d.setCpf(c);
+                lista.add(d);
+            }
+            con.close();
+        } catch (Exception erro) {
+            throw new RuntimeException(erro);
+        }
+        return lista;
+    }
+
 }

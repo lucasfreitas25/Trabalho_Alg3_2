@@ -1,6 +1,7 @@
 package com.example.application.views.cliente;
 
-//import com.vaadin.application.views.cliente.domain.DataService;
+//import com.vaadin.demo.domain.DataService;
+//import com.vaadin.demo.domain.Cliente;
 import com.example.application.repositories.ClienteRepository;
 import com.example.application.repositories.postgres.ClienteRepositoryImpl;
 //import java.util.List;
@@ -13,8 +14,6 @@ import com.vaadin.flow.component.grid.Grid;
 import com.vaadin.flow.component.html.Paragraph;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
-//import com.vaadin.flow.component.icon.Icon;
-//import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -50,7 +49,6 @@ public class ClienteView extends VerticalLayout {
         enderecoField = new TextField("Endereco:");
         salvarButton = new Button("Salvar");
         limpabutton = new Button("Cancelar");
-        // searchField = new TextField();
 
         limpabutton.addClickListener(ev -> {
             nomeField.setValue("");
